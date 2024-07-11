@@ -39,7 +39,7 @@ We need the same tools as Corundum to run the testbench. See below.
 
 Many of the testbenches for modules are from the original Corundum repository. 
 
-Once you install the dependencies (see above) you can run them using pytest. Navigate to the corresponding directory and run *pytest*. We created a new testbench for the resource translator module. Regarding full-system tests, we have currently only released a slightly modified version of the single-tenant testbench from Corundum. The multi-tenant testbench mentioned in the publication requires modifications to the above cocotb-pcie library. We are working on seeing if those modifications can be added to the repository as a new release. If not, we will release patches here. Expect more information and/or the code in the next few weeks (target mid August 2024). 
+Once you install the dependencies (see above) you can run them using pytest. Navigate to the corresponding directory and run *pytest*. We created a new testbench for the resource translator module. Regarding full-system tests, we have currently only released a slightly modified version of the single-tenant testbench from Corundum. The multi-tenant testbench mentioned in the publication required us to make modifications to the above cocotb-pcie library. We are working on seeing if those modifications can be added to the repository as a new release. If not, we will release patches here. Expect more information and/or the code in the next few weeks (target mid August 2024). 
 
 Example: *pytest -n auto --log-file=log.txt*
 
