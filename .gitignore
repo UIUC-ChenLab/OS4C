@@ -2,6 +2,7 @@
 *.lxt
 *.pyc
 *.vvp
+*.vcd
 *.kate-swp
 
 .*

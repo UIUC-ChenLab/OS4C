@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1704496514" />
+    <testcase name="run_test_nic" classname="test_mqnic_core_axi" file="/home/scottcs2/Desktop/SR-IOV/SRIOV-NIC/fpga/common/tb/mqnic_core_axi/test_mqnic_core_axi.py" lineno="210" time="342.61998558044434" sim_time_ns="891456.000001" ratio_time="2601.8797429191227" />
+  </testsuite>
+</testsuites>

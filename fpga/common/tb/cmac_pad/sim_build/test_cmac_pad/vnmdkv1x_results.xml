@@ -1,0 +1,9 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1704496513" />
+    <testcase name="run_test_001" classname="test_cmac_pad" file="/home/scottcs2/.local/lib/python3.8/site-packages/cocotb/regression.py" lineno="731" time="0.22316384315490723" sim_time_ns="800.001" ratio_time="3584.814585957306" />
+    <testcase name="run_test_002" classname="test_cmac_pad" file="/home/scottcs2/.local/lib/python3.8/site-packages/cocotb/regression.py" lineno="731" time="0.29939746856689453" sim_time_ns="3104.001" ratio_time="10367.492466979465" />
+    <testcase name="run_test_pad_001" classname="test_cmac_pad" file="/home/scottcs2/.local/lib/python3.8/site-packages/cocotb/regression.py" lineno="731" time="0.06825780868530273" sim_time_ns="272.00099999999975" ratio_time="3984.906712344649" />
+    <testcase name="run_test_pad_002" classname="test_cmac_pad" file="/home/scottcs2/.local/lib/python3.8/site-packages/cocotb/regression.py" lineno="731" time="0.09418582916259766" sim_time_ns="976.0010000000002" ratio_time="10362.503666184022" />
+  </testsuite>
+</testsuites>

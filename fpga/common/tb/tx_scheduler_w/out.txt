@@ -1,0 +1,496 @@
+WARNING  cocotb:simulator.py:521 Skipping compilation:/home/scottcs2/Desktop/SR-IOV/SRIOV-NIC/fpga/common/tb/tx_scheduler_w/sim_build/test_tx_scheduler_w-7-4/tx_scheduler_w.vvp
+INFO     cocotb:simulator.py:330 Running command: vvp -M /home/scottcs2/.local/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus /home/scottcs2/Desktop/SR-IOV/SRIOV-NIC/fpga/common/tb/tx_scheduler_w/sim_build/test_tx_scheduler_w-7-4/tx_scheduler_w.vvp
+INFO     cocotb:simulator.py:302      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:76   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+INFO     cocotb:simulator.py:302      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb                             Running tests with cocotb v1.8.1 from /home/scottcs2/.local/lib/python3.8/site-packages/cocotb
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb                             Seeding Python random module with 1702570603
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.regression                  Found test test_tx_scheduler_w.doorbell3_test_001
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.regression                  running doorbell3_test_001 (1/1)
+INFO     cocotb:simulator.py:302                                                           Automatically generated test
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       AXI lite master (write)
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       cocotbext-axi version 0.1.24
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       Copyright (c) 2020 Alex Forencich
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       https://github.com/alexforencich/cocotbext-axi
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       AXI lite master configuration:
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         Address width: 16 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         Byte size: 8 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         Data width: 32 bits (4 bytes)
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       AXI lite master signals:
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         awaddr width: 16 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         awprot width: 3 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         awready width: 1 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         awvalid width: 1 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         wdata width: 32 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         wready width: 1 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         wstrb width: 4 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         wvalid width: 1 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         bready width: 1 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         bresp width: 2 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         bvalid width: 1 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       AXI lite master (read)
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       cocotbext-axi version 0.1.24
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       Copyright (c) 2020 Alex Forencich
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       https://github.com/alexforencich/cocotbext-axi
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       AXI lite master configuration:
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         Address width: 16 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         Byte size: 8 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         Data width: 32 bits (4 bytes)
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       AXI lite master signals:
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         araddr width: 16 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         arprot width: 3 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         arready width: 1 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         arvalid width: 1 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         rdata width: 32 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         rready width: 1 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         rresp width: 2 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil         rvalid width: 1 bits
+INFO     cocotb:simulator.py:302      0.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302      0.00ns INFO     ..b.tx_scheduler_w.s_axis_doorbell Reset de-asserted
+INFO     cocotb:simulator.py:302      0.00ns INFO     ..otb.tx_scheduler_w.m_axis_tx_req Reset de-asserted
+INFO     cocotb:simulator.py:302      0.00ns INFO     ..scheduler_w.s_axis_tx_req_status Reset de-asserted
+INFO     cocotb:simulator.py:302      4.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset asserted
+INFO     cocotb:simulator.py:302      4.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset asserted
+INFO     cocotb:simulator.py:302      4.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset asserted
+INFO     cocotb:simulator.py:302      4.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset asserted
+INFO     cocotb:simulator.py:302      4.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset asserted
+INFO     cocotb:simulator.py:302      4.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset asserted
+INFO     cocotb:simulator.py:302      4.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset asserted
+INFO     cocotb:simulator.py:302      4.00ns INFO     ..b.tx_scheduler_w.s_axis_doorbell Reset asserted
+INFO     cocotb:simulator.py:302      4.00ns INFO     ..otb.tx_scheduler_w.m_axis_tx_req Reset asserted
+INFO     cocotb:simulator.py:302      4.00ns INFO     ..scheduler_w.s_axis_tx_req_status Reset asserted
+INFO     cocotb:simulator.py:302     12.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302     12.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302     12.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302     12.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302     12.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302     12.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302     12.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302     12.00ns INFO     ..b.tx_scheduler_w.s_axis_doorbell Reset de-asserted
+INFO     cocotb:simulator.py:302     12.00ns INFO     ..otb.tx_scheduler_w.m_axis_tx_req Reset de-asserted
+INFO     cocotb:simulator.py:302     12.00ns INFO     ..scheduler_w.s_axis_tx_req_status Reset de-asserted
+INFO     cocotb:simulator.py:302     20.00ns INFO     cocotb.tb                          Test pulse out
+INFO     cocotb:simulator.py:302     24.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000000 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    156.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000000 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    156.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000000 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    176.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000000 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    176.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000004 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    196.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000004 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    196.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000004 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    216.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000004 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    216.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000008 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    236.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000008 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    236.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000008 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    256.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000008 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    256.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x0000000c prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    276.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x0000000c prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    276.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x0000000c prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    296.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x0000000c prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    296.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000010 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    316.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000010 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    316.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000010 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    336.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000010 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    336.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000014 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    356.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000014 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    356.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000014 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    376.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000014 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    376.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000018 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    396.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000018 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    396.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000018 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    416.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000018 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    416.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x0000001c prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    436.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x0000001c prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    436.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x0000001c prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    456.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x0000001c prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    456.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000020 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    476.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000020 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    476.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000020 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    496.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000020 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    496.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000024 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    516.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000024 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    516.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000024 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    536.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000024 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    536.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000028 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    556.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000028 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    556.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000028 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    576.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000028 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    576.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x0000002c prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    596.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x0000002c prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    596.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x0000002c prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    616.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x0000002c prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    616.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000030 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    636.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000030 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    636.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000030 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    656.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000030 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    656.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000034 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    676.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000034 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    676.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000034 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    696.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000034 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    696.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000038 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    716.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000038 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    716.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000038 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    736.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000038 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    736.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x0000003c prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    756.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x0000003c prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    756.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x0000003c prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    776.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x0000003c prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    776.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000040 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    796.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000040 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    796.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000040 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    816.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000040 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    816.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000044 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    836.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000044 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    836.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000044 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    856.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000044 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    856.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000048 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    876.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000048 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    876.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000048 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    896.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000048 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    896.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x0000004c prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    916.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x0000004c prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    916.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x0000004c prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    936.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x0000004c prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    936.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000050 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    956.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000050 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    956.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000050 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302    976.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000050 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302    976.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000054 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302    996.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000054 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302    996.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000054 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1016.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000054 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1016.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000058 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1036.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000058 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1036.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000058 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1056.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000058 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1056.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x0000005c prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1076.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x0000005c prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1076.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x0000005c prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1096.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x0000005c prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1096.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000060 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1116.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000060 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1116.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000060 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1136.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000060 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1136.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000064 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1156.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000064 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1156.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000064 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1176.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000064 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1176.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000068 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1196.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000068 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1196.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000068 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1216.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000068 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1216.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x0000006c prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1236.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x0000006c prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1236.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x0000006c prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1256.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x0000006c prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1256.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000070 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1276.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000070 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1276.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000070 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1296.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000070 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1296.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000074 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1316.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000074 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1316.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000074 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1336.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000074 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1336.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000078 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1356.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000078 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1356.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000078 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1376.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000078 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1376.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x0000007c prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1396.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x0000007c prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1396.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x0000007c prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1416.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x0000007c prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   1416.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000080 prot: AxiProt.NONSECURE data: 04 00 00 00
+INFO     cocotb:simulator.py:302   1436.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000080 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1436.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000080 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1456.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000080 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 04 00 00 00
+INFO     cocotb:simulator.py:302   1456.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000084 prot: AxiProt.NONSECURE data: ba 00 00 00
+INFO     cocotb:simulator.py:302   1476.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000084 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1476.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000084 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1496.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000084 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: ba 00 00 00
+INFO     cocotb:simulator.py:302   1496.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000480 prot: AxiProt.NONSECURE data: e8 00 00 00
+INFO     cocotb:simulator.py:302   1516.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000480 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1516.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000480 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1536.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000480 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: e8 00 00 00
+INFO     cocotb:simulator.py:302   1536.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000484 prot: AxiProt.NONSECURE data: 7b 00 00 00
+INFO     cocotb:simulator.py:302   1556.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000484 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1556.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000484 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1576.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000484 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 7b 00 00 00
+INFO     cocotb:simulator.py:302   1576.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000488 prot: AxiProt.NONSECURE data: 0a 00 00 00
+INFO     cocotb:simulator.py:302   1596.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000488 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1596.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000488 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1616.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000488 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 0a 00 00 00
+INFO     cocotb:simulator.py:302   1616.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x0000048c prot: AxiProt.NONSECURE data: 85 00 00 00
+INFO     cocotb:simulator.py:302   1636.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x0000048c prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1636.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x0000048c prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1656.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x0000048c prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 85 00 00 00
+INFO     cocotb:simulator.py:302   1656.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000490 prot: AxiProt.NONSECURE data: 73 00 00 00
+INFO     cocotb:simulator.py:302   1676.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000490 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1676.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000490 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1696.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000490 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 73 00 00 00
+INFO     cocotb:simulator.py:302   1696.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000494 prot: AxiProt.NONSECURE data: 98 00 00 00
+INFO     cocotb:simulator.py:302   1716.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000494 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1716.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000494 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1736.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000494 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 98 00 00 00
+INFO     cocotb:simulator.py:302   1736.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000498 prot: AxiProt.NONSECURE data: a2 00 00 00
+INFO     cocotb:simulator.py:302   1756.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000498 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1756.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000498 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1776.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000498 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: a2 00 00 00
+INFO     cocotb:simulator.py:302   1776.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x0000049c prot: AxiProt.NONSECURE data: e7 00 00 00
+INFO     cocotb:simulator.py:302   1796.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x0000049c prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1796.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x0000049c prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1816.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x0000049c prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: e7 00 00 00
+INFO     cocotb:simulator.py:302   1816.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004a0 prot: AxiProt.NONSECURE data: 1a 00 00 00
+INFO     cocotb:simulator.py:302   1836.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004a0 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1836.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004a0 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1856.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004a0 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 1a 00 00 00
+INFO     cocotb:simulator.py:302   1856.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004a4 prot: AxiProt.NONSECURE data: 6c 00 00 00
+INFO     cocotb:simulator.py:302   1876.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004a4 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1876.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004a4 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1896.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004a4 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 6c 00 00 00
+INFO     cocotb:simulator.py:302   1896.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004a8 prot: AxiProt.NONSECURE data: 8b 00 00 00
+INFO     cocotb:simulator.py:302   1916.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004a8 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1916.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004a8 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1936.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004a8 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 8b 00 00 00
+INFO     cocotb:simulator.py:302   1936.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004ac prot: AxiProt.NONSECURE data: f8 00 00 00
+INFO     cocotb:simulator.py:302   1956.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004ac prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1956.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004ac prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   1976.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004ac prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: f8 00 00 00
+INFO     cocotb:simulator.py:302   1976.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004b0 prot: AxiProt.NONSECURE data: f5 00 00 00
+INFO     cocotb:simulator.py:302   1996.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004b0 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   1996.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004b0 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2016.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004b0 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: f5 00 00 00
+INFO     cocotb:simulator.py:302   2016.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004b4 prot: AxiProt.NONSECURE data: f8 00 00 00
+INFO     cocotb:simulator.py:302   2036.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004b4 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2036.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004b4 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2056.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004b4 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: f8 00 00 00
+INFO     cocotb:simulator.py:302   2056.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004b8 prot: AxiProt.NONSECURE data: 97 00 00 00
+INFO     cocotb:simulator.py:302   2076.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004b8 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2076.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004b8 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2096.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004b8 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 97 00 00 00
+INFO     cocotb:simulator.py:302   2096.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004bc prot: AxiProt.NONSECURE data: 4d 00 00 00
+INFO     cocotb:simulator.py:302   2116.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004bc prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2116.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004bc prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2136.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004bc prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 4d 00 00 00
+INFO     cocotb:simulator.py:302   2136.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004c0 prot: AxiProt.NONSECURE data: 5b 00 00 00
+INFO     cocotb:simulator.py:302   2156.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004c0 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2156.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004c0 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2176.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004c0 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 5b 00 00 00
+INFO     cocotb:simulator.py:302   2176.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004c4 prot: AxiProt.NONSECURE data: b8 00 00 00
+INFO     cocotb:simulator.py:302   2196.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004c4 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2196.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read staINFO     cocotb:simulator.py:302 1913352.00ns INFO     cocotb.regression                  doorbell3_test_001 passed
+INFO     cocotb:simulator.py:302 1913352.00ns INFO     cocotb.regression                  ************************************************************************************************
+INFO     cocotb:simulator.py:302                                                          ** TEST                                    STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+INFO     cocotb:simulator.py:302                                                          ************************************************************************************************
+INFO     cocotb:simulator.py:302                                                          ** test_tx_scheduler_w.doorbell3_test_001   PASS     1913352.00         851.83       2246.15  **
+INFO     cocotb:simulator.py:302                                                          ************************************************************************************************
+INFO     cocotb:simulator.py:302                                                          ** TESTS=1 PASS=1 FAIL=0 SKIP=0                      1913352.00         852.62       2244.08  **
+INFO     cocotb:simulator.py:302                                                          ************************************************************************************************
+INFO     cocotb:simulator.py:302 
+ERROR    cocotb:simulator.py:302 /home/scottcs2/.local/lib/python3.8/site-packages/matplotlib/backends/_backend_gtk.py:146: DeprecationWarning: Gtk.Window.set_wmclass is deprecated
+ERROR    cocotb:simulator.py:302   self.window.set_wmclass("matplotlib", "Matplotlib")
+INFO     cocotb:simulator.py:302 VCD info: dumpfile dump.vcd opened for output.
+INFO     cocotb:simulator.py:262 Results file: /home/scottcs2/Desktop/SR-IOV/SRIOV-NIC/fpga/common/tb/tx_scheduler_w/sim_build/test_tx_scheduler_w-1-4/5soxbu73_results.xml
+axil       Read start addr: 0x000004d0 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2336.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004d0 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 4e 00 00 00
+INFO     cocotb:simulator.py:302   2336.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004d4 prot: AxiProt.NONSECURE data: bb 00 00 00
+INFO     cocotb:simulator.py:302   2356.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004d4 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2356.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004d4 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2376.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004d4 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: bb 00 00 00
+INFO     cocotb:simulator.py:302   2376.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004d8 prot: AxiProt.NONSECURE data: ba 00 00 00
+INFO     cocotb:simulator.py:302   2396.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004d8 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2396.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004d8 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2416.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004d8 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: ba 00 00 00
+INFO     cocotb:simulator.py:302   2416.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004dc prot: AxiProt.NONSECURE data: 93 00 00 00
+INFO     cocotb:simulator.py:302   2436.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004dc prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2436.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004dc prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2456.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004dc prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 93 00 00 00
+INFO     cocotb:simulator.py:302   2456.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004e0 prot: AxiProt.NONSECURE data: ba 00 00 00
+INFO     cocotb:simulator.py:302   2476.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004e0 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2476.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004e0 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2496.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004e0 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: ba 00 00 00
+INFO     cocotb:simulator.py:302   2496.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004e4 prot: AxiProt.NONSECURE data: ba 00 00 00
+INFO     cocotb:simulator.py:302   2516.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004cc prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2516.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004cc prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2536.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004cc prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: f9 00 00 00
+INFO     cocotb:simulator.py:302   2536.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004d0 prot: AxiProt.NONSECURE data: 4e 00 00 00
+INFO     cocotb:simulator.py:302   2556.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004d0 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2556.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004d0 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2576.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004d0 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 4e 00 00 00
+INFO     cocotb:simulator.py:302   2576.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004d4 prot: AxiProt.NONSECURE data: bb 00 00 00
+INFO     cocotb:simulator.py:302   2596.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004d4 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2596.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004d4 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2616.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004d4 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: bb 00 00 00
+INFO     cocotb:simulator.py:302   2616.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004d8 prot: AxiProt.NONSECURE data: ba 00 00 00
+INFO     cocotb:simulator.py:302   2636.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004d8 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2636.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004d8 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2656.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004d8 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: ba 00 00 00
+INFO     cocotb:simulator.py:302   2656.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004dc prot: AxiProt.NONSECURE data: 93 00 00 00
+INFO     cocotb:simulator.py:302   2676.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004dc prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2676.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read staINFO     cocotb:simulator.py:302 1926680.00ns INFO     cocotb.regression                  doorbell3_test_001 passed
+INFO     cocotb:simulator.py:302 1926680.00ns INFO     cocotb.regression                  ************************************************************************************************
+INFO     cocotb:simulator.py:302                                                          ** TEST                                    STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+INFO     cocotb:simulator.py:302                                                          ************************************************************************************************
+INFO     cocotb:simulator.py:302                                                          ** test_tx_scheduler_w.doorbell3_test_001   PASS     1926680.00         840.80       2291.48  **
+INFO     cocotb:simulator.py:302                                                          ************************************************************************************************
+INFO     cocotb:simulator.py:302                                                          ** TESTS=1 PASS=1 FAIL=0 SKIP=0                      1926680.00         841.61       2289.27  **
+INFO     cocotb:simulator.py:302                                                          ************************************************************************************************
+INFO     cocotb:simulator.py:302 
+ERROR    cocotb:simulator.py:302 /home/scottcs2/.local/lib/python3.8/site-packages/matplotlib/backends/_backend_gtk.py:146: DeprecationWarning: Gtk.Window.set_wmclass is deprecated
+ERROR    cocotb:simulator.py:302   self.window.set_wmclass("matplotlib", "Matplotlib")
+INFO     cocotb:simulator.py:302 VCD info: dumpfile dump.vcd opened for output.
+INFO     cocotb:simulator.py:262 Results file: /home/scottcs2/Desktop/SR-IOV/SRIOV-NIC/fpga/common/tb/tx_scheduler_w/sim_build/test_tx_scheduler_w-7-4/sjtg77uz_results.xml
+axil       Read start addr: 0x000004e8 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2816.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004e8 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 47 00 00 00
+INFO     cocotb:simulator.py:302   2816.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004ec prot: AxiProt.NONSECURE data: ec 00 00 00
+INFO     cocotb:simulator.py:302   2836.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000504 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2836.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000504 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2856.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000504 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   2856.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_awaddr, idx None
+INFO     cocotb:simulator.py:302   INFO     cocotb:simulator.py:302   2876.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004f0 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2876.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004f0 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2896.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004f0 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: bc 00 00 00
+INFO     cocotb:simulator.py:302   2896.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004f4 prot: AxiProt.NONSECURE data: a3 00 00 00
+INFO     cocotb:simulator.py:302   2916.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004f4 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2916.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004f4 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2936.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004f4 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: a3 00 00 00
+INFO     cocotb:simulator.py:302   2936.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004f8 prot: AxiProt.NONSECURE data: 65 00 00 00
+INFO     cocotb:simulator.py:302   2956.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004f8 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2956.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004f8 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   2976.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004f8 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 65 00 00 00
+INFO     cocotb:simulator.py:302   2976.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x000004fc prot: AxiProt.NONSECURE data: bd 00 00 00
+INFO     cocotb:simulator.py:302   2996.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x000004fc prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   2996.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x000004fc prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   3016.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x000004fc prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: bd 00 00 00
+INFO     cocotb:simulator.py:302   3016.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000500 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3036.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000500 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   3036.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000500 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   3056.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000500 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3056.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000504 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3076.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000504 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   3076.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000504 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   3096.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000504 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3096.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000508 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3116.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000508 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   3116.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000508 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   3136.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000508 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3136.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x0000050c prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3156.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x0000050c prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   3156.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x0000050c prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   3176.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x0000050c prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3176.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000510 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3196.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000510 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   3196.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000510 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   3216.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000510 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3216.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000514 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3236.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000514 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   3236.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000514 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   3256.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000514 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3256.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x00000518 prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3276.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x00000518 prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   3276.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x00000518 prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   3296.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x00000518 prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3296.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write start addr: 0x0000051c prot: AxiProt.NONSECURE data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3316.00ns INFO     cocotb.tx_scheduler_w.s_axil       Write complete addr: 0x0000051c prot: AxiProt.NONSECURE resp: AxiResp.OKAY length: 4
+INFO     cocotb:simulator.py:302   3316.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read start addr: 0x0000051c prot: AxiProt.NONSECURE length: 4
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil       Read complete addr: 0x0000051c prot: AxiProt.NONSECURE resp: AxiResp.OKAY data: 01 00 00 00
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_awaddr, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_awvalid, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_awready, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_awprot
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_awprot, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_wdata, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_wvalid, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_wready, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_wstrb
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_wstrb, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_bvalid, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_bready, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_bresp
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_bresp, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_araddr, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_arvalid, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_arready, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_arprot
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axil_arprot, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              SignalINFO     cocotb:simulator.py:302 1941408.00ns INFO     cocotb.regression                  doorbell3_test_001 passed
+INFO     cocotb:simulator.py:302 1941408.00ns INFO     cocotb.regression                  ************************************************************************************************
+INFO     cocotb:simulator.py:302                                                          ** TEST                                    STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+INFO     cocotb:simulator.py:302                                                          ************************************************************************************************
+INFO     cocotb:simulator.py:302                                                          ** test_tx_scheduler_w.doorbell3_test_001   PASS     1941408.00         832.62       2331.68  **
+INFO     cocotb:simulator.py:302                                                          ************************************************************************************************
+INFO     cocotb:simulator.py:302                                                          ** TESTS=1 PASS=1 FAIL=0 SKIP=0                      1941408.00         833.42       2329.45  **
+INFO     cocotb:simulator.py:302                                                          ************************************************************************************************
+INFO     cocotb:simulator.py:302 
+ERROR    cocotb:simulator.py:302 /home/scottcs2/.local/lib/python3.8/site-packages/matplotlib/backends/_backend_gtk.py:146: DeprecationWarning: Gtk.Window.set_wmclass is deprecated
+ERROR    cocotb:simulator.py:302   self.window.set_wmclass("matplotlib", "Matplotlib")
+INFO     cocotb:simulator.py:302 VCD info: dumpfile dump.vcd opened for output.
+INFO     cocotb:simulator.py:262 Results file: /home/scottcs2/Desktop/SR-IOV/SRIOV-NIC/fpga/common/tb/tx_scheduler_w/sim_build/test_tx_scheduler_w-1-5/zdqpfmmh_results.xml
+_w.s_axil         awaddr width: 16 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         awprot width: 3 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         awready width: 1 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         awvalid width: 1 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         wdata width: 32 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         wready width: 1 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         wstrb width: 4 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         wvalid width: 1 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         bready width: 1 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         bresp width: 2 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         bvalid width: 1 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil       AXI lite master (read)
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil       cocotbext-axi version 0.1.24
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil       Copyright (c) 2020 Alex Forencich
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil       https://github.com/alexforencich/cocotbext-axi
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil       AXI lite master configuration:
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         Address width: 16 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         Byte size: 8 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         Data width: 32 bits (4 bytes)
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil       AXI lite master signals:
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         araddr width: 16 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         arprot width: 3 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         arready width: 1 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         arvalid width: 1 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         rdata width: 32 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         rready width: 1 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         rresp width: 2 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil         rvalid width: 1 bits
+INFO     cocotb:simulator.py:302   3336.00ns INFO     cocotb.tx_scheduler_w.s_axil       Reset de-asserted
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axis_doorbell_queue, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axis_doorbell_func, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axis_doorbell_valid, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axis_doorbell_ready
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Ignoring optional missing signal ready on bus s_axis_doorbell
+INFO     cocotb:simulator.py:302   3336.00ns INFO     ..b.tx_scheduler_w.s_axis_doorbell Reset de-asserted
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name m_axis_tx_req_queue, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name m_axis_tx_req_func, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name m_axis_tx_req_tag, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name m_axis_tx_req_valid, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name m_axis_tx_req_ready
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name m_axis_tx_req_ready, idx None
+INFO     cocotb:simulator.py:302   3336.00ns INFO     ..otb.tx_scheduler_w.m_axis_tx_req Reset de-asserted
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axis_tx_req_status_len, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axis_tx_req_status_tag, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axis_tx_req_status_valid, idx None
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Signal name s_axis_tx_req_status_ready
+INFO     cocotb:simulator.py:302   3336.00ns DEBUG    cocotb.tx_scheduler_w              Ignoring optional missing signal ready on bus s_axis_tx_req_status
+INFO     cocotb:simulator.py:302   3336.00ns INFO     ..scheduler_w.s_axis_tx_req_status Reset de-asserted
+INFO     cocotb:simulator.py:302 1904404.00ns INFO     cocotb.regression                  doorbell3_test_001 passed
+INFO     cocotb:simulator.py:302 1904404.00ns INFO     cocotb.regression                  ************************************************************************************************
+INFO     cocotb:simulator.py:302                                                          ** TEST                                    STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+INFO     cocotb:simulator.py:302                                                          ************************************************************************************************
+INFO     cocotb:simulator.py:302                                                          ** test_tx_scheduler_w.doorbell3_test_001   PASS     1904404.00         849.07       2242.92  **
+INFO     cocotb:simulator.py:302                                                          ************************************************************************************************
+INFO     cocotb:simulator.py:302                                                          ** TESTS=1 PASS=1 FAIL=0 SKIP=0                      1904404.00         849.87       2240.81  **
+INFO     cocotb:simulator.py:302                                                          ************************************************************************************************
+INFO     cocotb:simulator.py:302 
+ERROR    cocotb:simulator.py:302 /home/scottcs2/.local/lib/python3.8/site-packages/matplotlib/backends/_backend_gtk.py:146: DeprecationWarning: Gtk.Window.set_wmclass is deprecated
+ERROR    cocotb:simulator.py:302   self.window.set_wmclass("matplotlib", "Matplotlib")
+INFO     cocotb:simulator.py:302 VCD info: dumpfile dump.vcd opened for output.
+INFO     cocotb:simulator.py:262 Results file: /home/scottcs2/Desktop/SR-IOV/SRIOV-NIC/fpga/common/tb/tx_scheduler_w/sim_build/test_tx_scheduler_w-7-5/94b2gpbx_results.xml
