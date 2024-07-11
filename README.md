@@ -19,9 +19,17 @@ For documentation on Corundum's original design, see https://docs.corundum.io/
 
 ### Usage
 
-Navigate to fpga/mqnic/Alveo/fpga_100g/fpga_AU280 and type *make* to build.
+Instructions are for Linux machines. We tested with Ubuntu 20.04. Other Ubuntu versions may not work - if they do not, please reach out and we will try to fix it.
+
+Source your Vivado tools (We tried 2022.1, 2022.2, and 2021.1 - they all worked).
+
+Navigate to fpga/mqnic/Alveo/fpga_100g/fpga_AU280 and type *make* to build. You will need the 100G Xilinx license.
 
 You can change the synthesis parameters in the Makefile located in fpga/mqnic/Alveo/fpga_100g/fpga_AU28O/config.tcl
+
+**Note:** you need to make sure there are more of each type of resource than there are functions - otherwise synthesis will fail. Also, we assume everything is a power of 2 even though we have 1 PF and 252 VFs (we round up to 256). So for *FUNC_ID_WIDTH* we would put 8.
+
+
 
 ### Testbench
 
@@ -31,7 +39,7 @@ We need the same tools as Corundum to run the testbench. See below.
 
 Run the testbenches by navigating to the fpga/common/tb/ folder. Many of the testbenches for modules are from the original Corundum repo. 
 
-Once you install the dependencies (see above) you can run them using pytest. Currently, we have only released a simplified single-tenant testbench. The multi-tenant testbench requires modifications to some of the above libraries. We are working on seeing if those modifications can be added to those repositories as a new release. If not, we will release patches here. Expect that in the next week or two (by mid August 2024)
+Once you install the dependencies (see above) you can run them using pytest. Currently, we have only released a simplified single-tenant testbench. The multi-tenant testbench requires modifications to some of the above libraries. We are working on seeing if those modifications can be added to those repositories as a new release. If not, we will release patches here. Expect that in the next few weeks (by mid August 2024)
 
 Example: *pytest -n auto --log-file=log.txt*
 
@@ -41,10 +49,10 @@ The above will use pytest to launch a series of tests. The *-n auto* parameter t
 
 ### Notes and Future Work
 * We plan to discuss with the existing Corundum developers possible integration of our work into their projcect.
-* We are working to improve documentation over the next few weeks
+* We are working to improve documentation over the next few weeks as we fully release the simulation/testbench tools.
 
 
-## OS4C Publication
+## The OS4C Publication
 - S. Smith, Y. Ma, M. Lanz, B. Dai, M. Ohmacht, B. Sukhwani, H. Franke, V. Kindratenko, D. Chen, *OS4C: An Open-Source SR-IOV System for SmartNIC-based Cloud Platforms,* in IEEE Cloud'2024 
 
 ## Corundum Publications
