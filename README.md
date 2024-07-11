@@ -37,20 +37,18 @@ We need the same tools as Corundum to run the testbench. See below.
 
 "Running the included testbenches requires [cocotb](https://github.com/cocotb/cocotb), [cocotbext-axi](https://github.com/alexforencich/cocotbext-axi), [cocotbext-eth](https://github.com/alexforencich/cocotbext-eth), [cocotbext-pcie](https://github.com/alexforencich/cocotbext-pcie), [scapy](https://scapy.net/), and [Icarus Verilog](http://iverilog.icarus.com/).  The testbenches can be run with pytest directly (requires [cocotb-test](https://github.com/themperek/cocotb-test)), pytest via tox, or via cocotb makefiles." - from the original Corundum repository.
 
-Run the testbenches by navigating to the fpga/common/tb/ folder. Many of the testbenches for modules are from the original Corundum repo. 
+Many of the testbenches for modules are from the original Corundum repository. 
 
-Once you install the dependencies (see above) you can run them using pytest. Currently, we have only released a simplified single-tenant testbench. The multi-tenant testbench requires modifications to some of the above libraries. We are working on seeing if those modifications can be added to those repositories as a new release. If not, we will release patches here. Expect that in the next few weeks (by mid August 2024)
+Once you install the dependencies (see above) you can run them using pytest. Navigate to the corresponding directory and run *pytest*. We created a new testbench for the resource translator module. Regarding full-system tests, we have currently only released a slightly modified version of the single-tenant testbench from Corundum. The multi-tenant testbench mentioned in the publication requires modifications to the above cocotb-pcie library. We are working on seeing if those modifications can be added to the repository as a new release. If not, we will release patches here. Expect more information and/or the code in the next few weeks (target mid August 2024). 
 
 Example: *pytest -n auto --log-file=log.txt*
 
 The above will use pytest to launch a series of tests. The *-n auto* parameter tells pytest to automatically determine how many cores to use (more cores should enable faster completion of the set of tests). The *--log-file=log.txt* parameter lets you print lots of useful information to a log file. 
 
-
-
 ### Notes and Future Work
 * We plan to discuss with the existing Corundum developers possible integration of our work into their projcect.
 * We are working to improve documentation over the next few weeks as we fully release the simulation/testbench tools.
-
+* If you encounter any bugs, please let us know and we will work hard to fix them. Our goal is to continuously support this project and extend it with further enhancements/features.
 
 ## The OS4C Publication
 - S. Smith, Y. Ma, M. Lanz, B. Dai, M. Ohmacht, B. Sukhwani, H. Franke, V. Kindratenko, D. Chen, *OS4C: An Open-Source SR-IOV System for SmartNIC-based Cloud Platforms,* in IEEE Cloud'2024 
