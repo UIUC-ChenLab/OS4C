@@ -46,8 +46,7 @@ Example: *pytest -n auto --log-file=log.txt*
 The above will use pytest to launch a series of tests. The *-n auto* parameter tells pytest to automatically determine how many cores to use (more cores should enable faster completion of the set of tests). The *--log-file=log.txt* parameter lets you print lots of useful information to a log file. 
 
 ### Notes and Future Work
-* We plan to discuss with the existing Corundum developers possible integration of our work into their projcect.
-* We are working to improve documentation over the next few weeks as we fully release the simulation/testbench tools.
+* We are working to improve documentation upon request.
 * If you encounter any bugs, please let us know and we will work hard to fix them. Our goal is to continuously support this project and extend it with further enhancements/features.
 
 ## The OS4C Publication
