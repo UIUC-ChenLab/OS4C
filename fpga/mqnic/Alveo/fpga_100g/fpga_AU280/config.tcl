@@ -57,6 +57,7 @@ dict set params RELEASE_INFO  [format "32'h%08x" $release_info]
 # Board configuration
 dict set params CMS_ENABLE "1"
 dict set params FUNCTION_ID_WIDTH "8"
+dict set params VF_COUNT "4"
 
 # Structural configuration
 dict set params IF_COUNT "2"
@@ -143,8 +144,7 @@ dict set params RAM_ADDR_WIDTH [expr int(ceil(log(max([dict get $params TX_RAM_S
 dict set params RAM_PIPELINE "2"
 
 # Interrupt configuration
-dict set params IRQ_INDEX_WIDTH [expr [dict get $params EQN_WIDTH] - [dict get $params FUNCTION_ID_WIDTH]]
-
+dict set params IRQ_INDEX_WIDTH [expr [dict get $params EQN_WIDTH] - [expr int(ceil(log([dict get $params VF_COUNT]+1)/log(2)))]]
 # AXI lite interface configuration (control)
 dict set params AXIL_CTRL_DATA_WIDTH "32"
 dict set params AXIL_CTRL_ADDR_WIDTH "24"
@@ -254,6 +254,9 @@ dict set pcie_config "CONFIG.PF0_CLASS_CODE" [format "%06x" $pcie_class_code]
 dict set pcie_config "CONFIG.PF0_REVISION_ID" [format "%02x" $pcie_revision_id]
 dict set pcie_config "CONFIG.PF0_SUBSYSTEM_VENDOR_ID" [format "%04x" $pcie_subsystem_vendor_id]
 dict set pcie_config "CONFIG.PF0_SUBSYSTEM_ID" [format "%04x" $pcie_subsystem_device_id]
+
+# SR-IOV
+dict set pcie_config "CONFIG.PF0_SRIOV_CAP_INITIAL_VF" [dict get $params VF_COUNT]
 
 # MSI-X
 dict set pcie_config "CONFIG.pf0_msi_enabled" {false}

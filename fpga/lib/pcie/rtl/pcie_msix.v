@@ -44,7 +44,8 @@ module pcie_msix #
     // TLP interface configuration
     parameter TLP_HDR_WIDTH = 128,
     parameter TLP_FORCE_64_BIT_ADDR = 0,
-	parameter FUNCTION_ID_WIDTH = 8 // Scott
+	parameter FUNCTION_ID_WIDTH = 8, // Scott
+	parameter F_COUNT = 252+1
 )
 (
     input  wire                        clk,
@@ -78,7 +79,7 @@ module pcie_msix #
     /*
      * Interrupt request input
      */
-    input  wire [IRQ_INDEX_WIDTH - FUNCTION_ID_WIDTH - 1:0]   irq_index,
+    input  wire [IRQ_INDEX_WIDTH-1:0]   irq_index,
     input  wire [FUNCTION_ID_WIDTH-1:0] irq_function_id, // Scott
     input  wire                         irq_valid,
     output wire                         irq_ready,
@@ -102,12 +103,24 @@ module pcie_msix #
     input  wire                        msix_mask
 );
 
-parameter TBL_ADDR_WIDTH = IRQ_INDEX_WIDTH+1;
+parameter F_COUNT_WIDTH = $clog2(F_COUNT);
+
+// Combined addressing: { function_id , irq_index_within_function }
+// The table memory only needs F_COUNT_WIDTH bits of function id (unused upper bits are not indexed into tbl_mem)
+parameter COMBINED_INDEX_WIDTH = FUNCTION_ID_WIDTH + IRQ_INDEX_WIDTH;
+
+// Table address
+// low bit selects addr/data half of the MSI-X entry
+// IRQ_INDEX_WIDTH bits are the per-function entry index
+// F_COUNT_WIDTH bits are the (truncated) function id used for table lookup
+parameter TBL_ADDR_WIDTH = IRQ_INDEX_WIDTH+F_COUNT_WIDTH+1;
+
 parameter NUM_TABLE_ENTRIES = 2**TBL_ADDR_WIDTH; // Scott
-parameter NUM_ENTRIES_PER_FUNC = NUM_TABLE_ENTRIES / FUNCTION_ID_WIDTH;
+parameter NUM_FUNCS = 2**(F_COUNT_WIDTH);
+parameter NUM_ENTRIES_PER_FUNC = NUM_TABLE_ENTRIES / NUM_FUNCS;
 parameter CLOG_NUM_ENTRIES_PER_FUNC = $clog2(NUM_ENTRIES_PER_FUNC);
 
-parameter PBA_ADDR_WIDTH = IRQ_INDEX_WIDTH > 6 ? IRQ_INDEX_WIDTH-6 : 0;
+parameter PBA_ADDR_WIDTH = (F_COUNT_WIDTH + IRQ_INDEX_WIDTH) > 6 ? (F_COUNT_WIDTH + IRQ_INDEX_WIDTH)-6 : 0;
 parameter PBA_ADDR_WIDTH_INT = PBA_ADDR_WIDTH > 0 ? PBA_ADDR_WIDTH : 1;
 
 parameter INDEX_SHIFT = $clog2(64/8);
@@ -126,12 +139,12 @@ initial begin
         $finish;
     end
 
-    if (AXIL_ADDR_WIDTH < IRQ_INDEX_WIDTH+5) begin
+    if (AXIL_ADDR_WIDTH < (F_COUNT_WIDTH + IRQ_INDEX_WIDTH)+5) begin
         $error("Error: AXI lite address width %d too narrow (instance %m)", AXIL_ADDR_WIDTH);
         $finish;
     end
 
-    if (IRQ_INDEX_WIDTH > 11) begin
+    if ((F_COUNT_WIDTH + IRQ_INDEX_WIDTH) > 11) begin
         $error("Error: IRQ index width must be 11 or less (instance %m)");
         $finish;
     end
@@ -152,7 +165,7 @@ localparam [1:0]
 
 reg [1:0] state_reg = STATE_IDLE, state_next;
 
-reg [IRQ_INDEX_WIDTH-1:0] irq_index_reg = 0, irq_index_next;
+reg [COMBINED_INDEX_WIDTH-1:0] irq_index_reg = 0, irq_index_next;
 reg [FUNCTION_ID_WIDTH-1:0] irq_function_id_reg, irq_function_id_next; // Scott
 
 reg [63:0] vec_addr_reg = 0, vec_addr_next;
@@ -212,22 +225,22 @@ reg [63:0] pba_mem_rd_data_reg = 0;
 reg [63:0] tbl_axil_mem_rd_data_reg = 0;
 reg [63:0] pba_axil_mem_rd_data_reg = 0;
 
-// wire [TBL_ADDR_WIDTH-1:0] s_axil_awaddr_index_temp = s_axil_awaddr >> INDEX_SHIFT; // Scott
-// wire [TBL_ADDR_WIDTH-1:0] s_axil_awaddr_index; // Scott
-// assign s_axil_awaddr_index[CLOG_NUM_ENTRIES_PER_FUNC-1:0] = s_axil_awaddr_index_temp; // Scott
-// assign s_axil_awaddr_index[TBL_ADDR_WIDTH-1:CLOG_NUM_ENTRIES_PER_FUNC] = s_axil_awuser; // Scott
-
 wire [TBL_ADDR_WIDTH-1:0] s_axil_awaddr_index = s_axil_awaddr >> INDEX_SHIFT; // Scott
 wire [WORD_SELECT_WIDTH-1:0] s_axil_awaddr_word = AXIL_DATA_WIDTH < 64 ? s_axil_awaddr >> WORD_SELECT_SHIFT : 0; // Scott
 
-
-// wire [TBL_ADDR_WIDTH-1:0] s_axil_araddr_index_temp = s_axil_araddr >> INDEX_SHIFT; // Scott
-// wire [TBL_ADDR_WIDTH-1:0] s_axil_araddr_index;  // Scott
-// assign s_axil_araddr_index[CLOG_NUM_ENTRIES_PER_FUNC-1:0] = s_axil_araddr_index_temp; // Scott
-// assign s_axil_araddr_index[TBL_ADDR_WIDTH-1:CLOG_NUM_ENTRIES_PER_FUNC] = s_axil_aruser; // Scott
-
 wire [TBL_ADDR_WIDTH-1:0] s_axil_araddr_index = s_axil_araddr >> INDEX_SHIFT;  // Scott
 wire [WORD_SELECT_WIDTH-1:0] s_axil_araddr_word = AXIL_DATA_WIDTH < 64 ? s_axil_araddr >> WORD_SELECT_SHIFT : 0; // Scott
+
+// Per-function portion of irq_index_reg used to address the MSI-X table
+// and PBA. The TBL_ADDR_WIDTH provides the low bit for addr/data select
+wire [IRQ_INDEX_WIDTH-1:0] irq_index_within_func = irq_index_reg[IRQ_INDEX_WIDTH-1:0];
+
+// Truncated function id used to index tbl_mem
+wire [F_COUNT_WIDTH-1:0] irq_func_for_tbl = irq_index_reg[IRQ_INDEX_WIDTH +: F_COUNT_WIDTH];
+
+// Pre-compute the combined table index: { func_for_tbl, irq_index_within_func }
+// This is the address within tbl_mem (minus the addr/data low bit)
+wire [F_COUNT_WIDTH+IRQ_INDEX_WIDTH-1:0] tbl_combined_index = {irq_func_for_tbl, irq_index_within_func};
 
 assign s_axil_awready = s_axil_awready_reg;
 assign s_axil_wready = s_axil_wready_reg;
@@ -264,11 +277,13 @@ always @* begin
     state_next = STATE_IDLE;
 
     tbl_mem_rd_en = 1'b0;
-    tbl_mem_addr = {irq_index_reg, 1'b0};
+    tbl_mem_addr = {tbl_combined_index, 1'b0};
 
     pba_mem_rd_en = 1'b0;
     pba_mem_wr_en = 1'b0;
-    pba_mem_addr = irq_index_reg >> 5;
+    // PBA rows are 64 bits wide, so the address should be the combined index shifted right by 6 (log2 64), not 5
+    //  The prior default used >> 5 which mis-addressed the PBA every other row.
+    pba_mem_addr = tbl_combined_index >> 6;
     pba_mem_wr_data = 0;
 
     irq_index_next = irq_index_reg;
@@ -303,11 +318,10 @@ always @* begin
     tlp_hdr[109:108] = 2'b00; // attr
     tlp_hdr[107:106] = 3'b000; // AT
     tlp_hdr[105:96] = 10'd1; // length
-    // DW 1
-	//$display("Scott irq_index_reg = %b", irq_index_reg);
-	func_id[7:0] = irq_index_reg >> CLOG_NUM_ENTRIES_PER_FUNC;
-    tlp_hdr[95:80] = {8'b0, func_id}; // requester ID
-	//$display("Scott tlp_hdr = %b ", tlp_hdr[95:80]);
+
+    func_id[7:0] = irq_function_id_reg;
+    tlp_hdr[95:80] = {requester_id[15:8], func_id}; // requester ID
+
     tlp_hdr[79:72] = 8'd0; // tag
     tlp_hdr[71:68] = 4'b0000; // last BE
     tlp_hdr[67:64] = 4'b1111; // first BE
@@ -334,34 +348,35 @@ always @* begin
                 irq_function_id_next = irq_function_id;
 
                 tbl_mem_rd_en = 1'b1;
-                tbl_mem_addr = {irq_index_next, 1'b0};
+                tbl_mem_addr = {irq_function_id[F_COUNT_WIDTH-1:0], irq_index, 1'b0};
 
                 pba_mem_rd_en = 1'b1;
-                pba_mem_addr = irq_index_next >> 6;
+                pba_mem_addr = {irq_function_id[F_COUNT_WIDTH-1:0], irq_index} >> 6;
 
                 state_next = STATE_READ_TBL_1;
             end else if (!irq_valid && msix_enable_reg && !msix_mask_reg) begin
                 // no new request waiting, scan PBA for masked requests
 
-                if (pba_mem_rd_data_reg[irq_index_reg & 6'h3f]) begin
+                if (pba_mem_rd_data_reg[irq_index_within_func & 6'h3f]) begin
                     // PBA bit for current index is set, try issuing it
                     irq_ready_next = 1'b0;
 
                     tbl_mem_rd_en = 1'b1;
-                    tbl_mem_addr = {irq_index_next, 1'b0};
+                    tbl_mem_addr = {tbl_combined_index, 1'b0};
 
                     pba_mem_rd_en = 1'b1;
-                    pba_mem_addr = irq_index_next >> 6;
+                    pba_mem_addr = tbl_combined_index >> 6;
 
                     state_next = STATE_READ_TBL_1;
                 end else begin
                     // PBA bit for current index is not set
                     if (pba_mem_rd_data_reg) begin
                         // at least one bit set in current group, move to next index
-                        irq_index_next = irq_index_reg + 1;
+                        irq_index_next = irq_index_reg + 1'b1;
                     end else begin
-                        // no bits set in current group, move to next group
-                        irq_index_next = (irq_index_reg & ({IRQ_INDEX_WIDTH{1'b1}} << 6)) + 7'd64;
+                        // FIX: move to the next 64-bit PBA group while preserving the upper function-id bits of the combined index
+                        // Prior code used {IRQ_INDEX_WIDTH{1'b1}} << 6 which shifted all bits out and yielded zero — effectively jumping to the start of function 0 every time
+                        irq_index_next = (irq_index_reg & ~{{(COMBINED_INDEX_WIDTH-6){1'b0}}, 6'h3F}) + 7'd64;
                     end
 
                     pba_mem_rd_en = 1'b1;
@@ -376,7 +391,7 @@ always @* begin
         STATE_READ_TBL_1: begin
             // handle first table read
             tbl_mem_rd_en = 1'b1;
-            tbl_mem_addr = {irq_index_reg, 1'b1};
+            tbl_mem_addr = {tbl_combined_index, 1'b1};
 
             vec_addr_next = {tbl_mem_rd_data_reg[63:2], 2'b00};
 
@@ -393,28 +408,26 @@ always @* begin
             end else begin
                 // set PBA bit
                 pba_mem_wr_en = 1'b1;
-                pba_mem_wr_data = pba_mem_rd_data_reg | (1 << (irq_index_reg & 6'h3F));
+                pba_mem_wr_data = pba_mem_rd_data_reg |
+                    (64'h1 << (irq_index_within_func & 6'h3F));
                 irq_ready_next = 1'b1;
                 state_next = STATE_IDLE;
             end
         end
         STATE_SEND_TLP: begin
-			// $display("Scott func_id = %b ", func_id[7:0]);
             if (!tx_wr_req_tlp_valid || tx_wr_req_tlp_ready) begin
                 // send TLP
                 tx_wr_req_tlp_data_next = vec_data_reg;
                 tx_wr_req_tlp_hdr_next = tlp_hdr;
 
                 tx_wr_req_tlp_valid_next = 1'b1;
-				// $display("Scott tlp_valid_next = %b ",  tx_wr_req_tlp_valid_next);
-				// $display("Scott func_id = %b ", func_id[7:0]);
 
                 // clear PBA bit
                 pba_mem_wr_en = 1'b1;
-                pba_mem_wr_data = pba_mem_rd_data_reg & ~(1 << (irq_index_reg & 6'h3F));
+                pba_mem_wr_data = pba_mem_rd_data_reg & ~(64'h1 << (irq_index_within_func & 6'h3F));
 
                 // increment index so we don't check the same PBA bit immediately
-                irq_index_next = irq_index_reg + 1;
+                irq_index_next = irq_index_reg + 1'b1;
 
                 irq_ready_next = 1'b1;
                 state_next = STATE_IDLE;

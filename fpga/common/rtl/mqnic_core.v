@@ -32,7 +32,8 @@ module mqnic_core #
     
     // SRIOV Configuration
     parameter FUNCTION_ID_WIDTH = 8, // Scott
-	parameter NUM_FUNCS = FUNCTION_ID_WIDTH == 8 ? 252 : 2**FUNCTION_ID_WIDTH,
+    // Number of Functions (252 VF, 4 PF)
+    parameter F_COUNT = 252+1,
 
     parameter PORT_COUNT = IF_COUNT*PORTS_PER_IF,
 
@@ -699,10 +700,15 @@ wire [AXIL_CTRL_DATA_WIDTH-1:0] ctrl_reg_rd_data_int;
 wire ctrl_reg_rd_wait_int;
 wire ctrl_reg_rd_ack_int;
 
+// user bus
+wire [FUNCTION_ID_WIDTH-1:0] ctrl_reg_wr_user;
+wire [FUNCTION_ID_WIDTH-1:0] ctrl_reg_rd_user;
+
 axil_reg_if #(
     .DATA_WIDTH(AXIL_CTRL_DATA_WIDTH),
     .ADDR_WIDTH(AXIL_CSR_ADDR_WIDTH),
     .STRB_WIDTH(AXIL_CTRL_STRB_WIDTH),
+    .USER_WIDTH(FUNCTION_ID_WIDTH),
     .TIMEOUT(4)
 )
 axil_reg_if_inst (
@@ -713,6 +719,7 @@ axil_reg_if_inst (
      * AXI-Lite slave interface
      */
     .s_axil_awaddr(axil_csr_awaddr),
+    .s_axil_awuser(axil_csr_awuser),
     .s_axil_awprot(axil_csr_awprot),
     .s_axil_awvalid(axil_csr_awvalid),
     .s_axil_awready(axil_csr_awready),
@@ -724,6 +731,7 @@ axil_reg_if_inst (
     .s_axil_bvalid(axil_csr_bvalid),
     .s_axil_bready(axil_csr_bready),
     .s_axil_araddr(axil_csr_araddr),
+    .s_axil_aruser(axil_csr_aruser),
     .s_axil_arprot(axil_csr_arprot),
     .s_axil_arvalid(axil_csr_arvalid),
     .s_axil_arready(axil_csr_arready),
@@ -738,10 +746,12 @@ axil_reg_if_inst (
     .reg_wr_addr(ctrl_reg_wr_addr),
     .reg_wr_data(ctrl_reg_wr_data),
     .reg_wr_strb(ctrl_reg_wr_strb),
+    .reg_wr_user(ctrl_reg_wr_user),
     .reg_wr_en(ctrl_reg_wr_en),
     .reg_wr_wait(ctrl_reg_wr_wait_int),
     .reg_wr_ack(ctrl_reg_wr_ack_int),
     .reg_rd_addr(ctrl_reg_rd_addr),
+    .reg_rd_user(ctrl_reg_rd_user),
     .reg_rd_en(ctrl_reg_rd_en),
     .reg_rd_data(ctrl_reg_rd_data_int),
     .reg_rd_wait(ctrl_reg_rd_wait_int),
@@ -803,7 +813,7 @@ always @(posedge clk) begin
             8'h20: ctrl_reg_rd_data_reg <= BUILD_DATE;    // FW ID: Build date
             8'h24: ctrl_reg_rd_data_reg <= GIT_HASH;      // FW ID: Git commit hash
             8'h28: ctrl_reg_rd_data_reg <= RELEASE_INFO;  // FW ID: Release info
-			8'h2C: ctrl_reg_rd_data_reg <= NUM_FUNCS; 	  // FW ID: total functions
+			8'h2C: ctrl_reg_rd_data_reg <= F_COUNT; 	  // FW ID: total functions
             // IRQ configuration
             8'h40: ctrl_reg_rd_data_reg <= 32'h0000C007;  // IRQ config: Type
             8'h44: ctrl_reg_rd_data_reg <= 32'h00000100;  // IRQ config: Version
@@ -3248,7 +3258,8 @@ generate
             .AXIS_IF_RX_USER_WIDTH(AXIS_IF_RX_USER_WIDTH),
 
             // SRIOV Configuration Scott
-            .FUNCTION_ID_WIDTH(FUNCTION_ID_WIDTH)
+            .FUNCTION_ID_WIDTH(FUNCTION_ID_WIDTH),
+            .F_COUNT(F_COUNT)
         )
         interface_inst (
             .clk(clk),

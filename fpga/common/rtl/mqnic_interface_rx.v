@@ -83,7 +83,8 @@ module mqnic_interface_rx #
     parameter AXIS_RX_USER_WIDTH = (PTP_TS_ENABLE ? PTP_TS_WIDTH : 0) + 1,
 
     // SRIOV config
-    parameter FUNCTION_ID_WIDTH = 8
+    parameter FUNCTION_ID_WIDTH = 8,
+    parameter F_COUNT = 252 + 1
 )
 (
     input  wire                                         clk,
@@ -378,7 +379,8 @@ rx_engine #(
     .AXIS_RX_ID_WIDTH(AXIS_RX_ID_WIDTH),
     .AXIS_RX_DEST_WIDTH(AXIS_RX_DEST_WIDTH),
     .AXIS_RX_USER_WIDTH(INT_AXIS_RX_USER_WIDTH),
-    .FUNCTION_ID_WIDTH(FUNCTION_ID_WIDTH)
+    .FUNCTION_ID_WIDTH(FUNCTION_ID_WIDTH),
+    .F_COUNT(F_COUNT)
 )
 rx_engine_inst (
     .clk(clk),

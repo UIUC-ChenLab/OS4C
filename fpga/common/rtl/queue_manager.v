@@ -31,6 +31,8 @@ module queue_manager #
     parameter QUEUE_PTR_WIDTH = 16,
     // Function ID index width (log2 of number of function IDs)
     parameter FUNCTION_ID_WIDTH = 8, // Scott
+    // Number of Functions (252 VF, 4 PF)
+    parameter F_COUNT = 252+1,
     // Log queue size field width
     parameter LOG_QUEUE_SIZE_WIDTH = $clog2(QUEUE_PTR_WIDTH),
     // Queue element size
@@ -122,7 +124,9 @@ module queue_manager #
 
 parameter QUEUE_COUNT = 2**QUEUE_INDEX_WIDTH;
 
-parameter CPL_QUEUES_PER_FUNC = (2**CPL_INDEX_WIDTH) / (2**FUNCTION_ID_WIDTH); // Scott
+parameter NUM_FUNCS = 2**($clog2(F_COUNT));
+
+parameter CPL_QUEUES_PER_FUNC = (2**CPL_INDEX_WIDTH) / (NUM_FUNCS); // Scott
 
 parameter LOG_QUEUES_PER_FUNC = $clog2(CPL_QUEUES_PER_FUNC); // Scott
 
@@ -519,7 +523,7 @@ always @* begin
 						    queue_ram_be[8] = 1'b1; 
                         end else begin
                             queue_ram_be[8] = 1'b1;
-                            queue_ram_write_data[71:64] = axil_reg_pipeline_function_id_reg[PIPELINE-1]
+                            queue_ram_write_data[71:64] = axil_reg_pipeline_function_id_reg[PIPELINE-1];
                         end
                     end
                     32'h8002zzzz: begin

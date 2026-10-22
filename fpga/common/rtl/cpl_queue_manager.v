@@ -31,6 +31,8 @@ module cpl_queue_manager #
     parameter QUEUE_PTR_WIDTH = 16,
     // Function ID index width (log2 of number of function IDs)
     parameter FUNCTION_ID_WIDTH = 8, // Scott
+    // Number of Functions (252 VF, 4 PF)
+    parameter F_COUNT = 252+1,
     // Filter the Event Queue Pointer
     parameter FILTER_EQ_PTR = 1, // Scott
     // Log queue size field width
@@ -127,7 +129,10 @@ parameter CL_OP_TABLE_SIZE = $clog2(OP_TABLE_SIZE);
 
 parameter CL_CPL_SIZE = $clog2(CPL_SIZE);
 
-parameter EVENT_QUEUES_PER_FUNC = (2**EVENT_WIDTH) / (2**FUNCTION_ID_WIDTH); // Scott
+// Round F_COUNT up to nearest power of 2
+parameter NUM_FUNCS = 2**($clog2(F_COUNT));
+
+parameter EVENT_QUEUES_PER_FUNC = (2**EVENT_WIDTH) / (NUM_FUNCS); // Scott
 parameter LOG_QUEUES_PER_FUNC = FILTER_EQ_PTR == 1 ? $clog2(EVENT_QUEUES_PER_FUNC) : 2; // Scott
 
 // Scott: Change total size to be 136 to hold VF ID

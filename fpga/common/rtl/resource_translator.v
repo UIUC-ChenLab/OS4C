@@ -14,7 +14,8 @@
 // This is the virtual to physical resource translation logic mentioned in the 2024 IEEE Cloud Paper.
 module resource_translator # (
     parameter TOTAL_RESOURCES = 4096, // The number of resources we are virtualizing
-	parameter FUNCTION_ID_WIDTH = 8, // Number of functions
+	parameter FUNCTION_ID_WIDTH = 8, // Function ID Width
+	parameter F_COUNT = 252+1, // Number of functions
 	parameter RESOURCE_BIT_WIDTH = 2, // Number of bits per resource (for example, if each resource has a set of relevant addresses)
 	parameter AXIL_ADDR_WIDTH = 32 // AXIL Address Width
 
@@ -36,7 +37,7 @@ module resource_translator # (
 wire [AXIL_ADDR_WIDTH-1:0] output_read_address_translated;
 wire [AXIL_ADDR_WIDTH-1:0] output_write_address_translated;
 
-parameter TOTAL_FUNCS = 2**FUNCTION_ID_WIDTH;
+parameter TOTAL_FUNCS = 2**($clog2(F_COUNT));
 
 parameter RESOURCES_PER_FUNC = TOTAL_RESOURCES / TOTAL_FUNCS;
 parameter RESOURCE_PER_FUNC_BITS = $clog2(RESOURCES_PER_FUNC);

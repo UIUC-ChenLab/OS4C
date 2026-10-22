@@ -594,8 +594,14 @@ struct net_device *mqnic_create_netdev(struct mqnic_if *interface, int index,
 	if (ndev->dev_port >= mdev->mac_count) {
 		dev_warn(dev, "Exhausted permanent MAC addresses; using random MAC");
 		eth_hw_addr_random(ndev);
+
+		u8 addr[ETH_ALEN];
+        memcpy(addr, ndev->dev_addr, ETH_ALEN);
+        addr[ETH_ALEN - 1] = interface->mac;
+        eth_hw_addr_set(ndev, addr);
 	} else {
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 15, 0)
+        mdev->mac_list[ndev->dev_port][ETH_ALEN - 1] = interface->mac;
 		eth_hw_addr_set(ndev, mdev->mac_list[ndev->dev_port]);
 #else
 		memcpy(ndev->dev_addr, mdev->mac_list[ndev->dev_port], ETH_ALEN);

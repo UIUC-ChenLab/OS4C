@@ -50,6 +50,7 @@ int mqnic_irq_init_pcie(struct mqnic_dev *mdev)
 		}
 
 		irq->index = k;
+	    dev_info(dev, "IRQ Index %d", k);
 		irq->irqn = pci_irq_vector(pdev, k);
 		mdev->irq[k] = irq;
 	}

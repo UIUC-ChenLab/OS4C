@@ -1098,7 +1098,7 @@ cmac_gty_wrapper #(
     .AXIS_KEEP_WIDTH(AXIS_ETH_KEEP_WIDTH),
     .TX_SERDES_PIPELINE(0),
     .RX_SERDES_PIPELINE(0),
-    .RS_FEC_ENABLE(1)
+    .RS_FEC_ENABLE(0)
 )
 qsfp0_cmac_inst (
     .xcvr_ctrl_clk(clk_125mhz_int),
@@ -1223,7 +1223,7 @@ cmac_gty_wrapper #(
     .AXIS_KEEP_WIDTH(AXIS_ETH_KEEP_WIDTH),
     .TX_SERDES_PIPELINE(0),
     .RX_SERDES_PIPELINE(0),
-    .RS_FEC_ENABLE(1)
+    .RS_FEC_ENABLE(0)
 )
 qsfp1_cmac_inst (
     .xcvr_ctrl_clk(clk_125mhz_int),

@@ -280,14 +280,14 @@ static int mqnic_common_probe(struct mqnic_dev *mqnic)
 	mqnic->build_date = ioread32(mqnic->fw_id_rb->regs + MQNIC_RB_FW_ID_REG_BUILD_DATE);
 	mqnic->git_hash = ioread32(mqnic->fw_id_rb->regs + MQNIC_RB_FW_ID_REG_GIT_HASH);
 	mqnic->rel_info = ioread32(mqnic->fw_id_rb->regs + MQNIC_RB_FW_ID_REG_REL_INFO);
-	mqnic->num_funcs = ioread32(mqnic->fw_id_rb->regs + MQNIC_RB_FW_ID_REG_NUM_FUNCS);
-
-	if (mqnic->num_funcs == 256) {
-		mqnic->num_funcs = 252;
-	}
+	mqnic->num_funcs = ioread32(mqnic->fw_id_rb->regs + MQNIC_RB_FW_ID_REG_NUM_FUNCS) - 1;
 
 	dev_info(dev, "NUMBER OF FUNCS: 0x%08x", mqnic->num_funcs);
-
+	
+    if (mqnic->num_funcs < 2 || mqnic->num_funcs > 252){
+        dev_err(dev, "Error: Invalid VF count");
+        goto fail_rb_init;
+    }
 	rtc_time64_to_tm(mqnic->build_date, &tm);
 
 	dev_info(dev, "FPGA ID: 0x%08x", mqnic->fpga_id);
@@ -686,7 +686,7 @@ static int mqnic_pci_probe(struct pci_dev *pdev, const struct pci_device_id *ent
 
 	// error handling
 fail_sriov:
-	//pci_disable_sriov(pdev);
+	pci_disable_sriov(pdev);
 fail_common:
 	pci_clear_master(pdev);
 	mqnic_irq_deinit_pcie(mqnic);
@@ -726,7 +726,7 @@ static void mqnic_pci_remove(struct pci_dev *pdev)
 	if (mqnic->ram_hw_addr)
 		pci_iounmap(pdev, mqnic->ram_hw_addr);
 	pci_release_regions(pdev);
-	//pci_disable_sriov(pdev);
+	pci_disable_sriov(pdev);
 	pci_disable_device(pdev);
 	mqnic_free_id(mqnic);
 	mqnic_devlink_free(devlink);
@@ -860,7 +860,11 @@ fail:
 	return ret;
 }
 
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 11, 0)
+static void mqnic_platform_remove(struct platform_device *pdev)
+#else
 static int mqnic_platform_remove(struct platform_device *pdev)
+#endif
 {
 	struct mqnic_dev *mqnic = platform_get_drvdata(pdev);
 	struct devlink *devlink = priv_to_devlink(mqnic);
@@ -871,7 +875,11 @@ static int mqnic_platform_remove(struct platform_device *pdev)
 
 	mqnic_free_id(mqnic);
 	mqnic_devlink_free(devlink);
-	return 0;
+#if LINUX_VERSION_CODE  >= KERNEL_VERSION(6, 11, 0)
+    return;
+#else
+    return 0;
+#endif
 }
 
 static struct platform_driver mqnic_platform_driver = {

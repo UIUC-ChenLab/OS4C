@@ -5,6 +5,8 @@ ifneq ($(KERNELRELEASE),)
 
 # object files to build
 obj-m += mqnic.o
+obj-m += mqnicvf.o
+
 mqnic-y += mqnic_main.o
 mqnic-y += mqnic_devlink.o
 mqnic-y += mqnic_res.o
@@ -26,6 +28,29 @@ mqnic-y += mqnic_rx.o
 mqnic-y += mqnic_cq.o
 mqnic-y += mqnic_eq.o
 mqnic-y += mqnic_ethtool.o
+
+mqnicvf-y += mqnicvf_main.o
+mqnicvf-y += mqnic_devlink.o
+mqnicvf-y += mqnic_res.o
+mqnicvf-y += mqnic_reg_block.o
+mqnicvf-y += mqnic_irq.o
+mqnicvf-y += mqnic_dev.o
+mqnicvf-y += mqnic_if.o
+mqnicvf-y += mqnic_port.o
+mqnicvf-y += mqnic_netdev.o
+mqnicvf-y += mqnic_sched_block.o
+mqnicvf-y += mqnic_scheduler.o
+mqnicvf-y += mqnic_ptp.o
+mqnicvf-y += mqnic_i2c.o
+mqnicvf-y += mqnic_board.o
+mqnicvf-y += mqnic_clk_info.o
+mqnicvf-y += mqnic_stats.o
+mqnicvf-y += mqnic_tx.o
+mqnicvf-y += mqnic_rx.o
+mqnicvf-y += mqnic_cq.o
+mqnicvf-y += mqnic_eq.o
+mqnicvf-y += mqnic_ethtool.o
+
 
 ifneq ($(DEBUG),)
 ccflags-y += -DDEBUG

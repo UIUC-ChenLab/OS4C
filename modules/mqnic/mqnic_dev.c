@@ -7,6 +7,7 @@
 #include "mqnic_ioctl.h"
 
 #include <linux/uaccess.h>
+#include <linux/version.h>
 
 static int mqnic_open(struct inode *inode, struct file *file)
 {
@@ -134,15 +135,23 @@ static long mqnic_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
 			info.child = 0;
 			info.size = mqnic->hw_regs_size;
 			info.offset = ((u64)info.index) << 40;
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(6,0,0)
+			strscpy(info.name, "ctrl", sizeof(info.name));
+#else
 			strlcpy(info.name, "ctrl", sizeof(info.name));
-			break;
+#endif
+            break;
 		case 1:
 			info.type = MQNIC_REGION_TYPE_APP_CTRL;
 			info.next = 2;
 			info.child = 0;
 			info.size = mqnic->app_hw_regs_size;
 			info.offset = ((u64)info.index) << 40;
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(6,0,0)
+			strscpy(info.name, "app", sizeof(info.name));
+#else
 			strlcpy(info.name, "app", sizeof(info.name));
+#endif
 			break;
 		case 2:
 			info.type = MQNIC_REGION_TYPE_RAM;
@@ -150,7 +159,11 @@ static long mqnic_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
 			info.child = 0;
 			info.size = mqnic->ram_hw_regs_size;
 			info.offset = ((u64)info.index) << 40;
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(6,0,0)
+			strscpy(info.name, "ram", sizeof(info.name));
+#else
 			strlcpy(info.name, "ram", sizeof(info.name));
+#endif
 			break;
 		default:
 			return -EINVAL;

@@ -21,6 +21,7 @@
 #include <linux/ptp_clock_kernel.h>
 #include <linux/timer.h>
 #include <net/devlink.h>
+#include <linux/log2.h>
 
 #include <linux/i2c.h>
 #include <linux/i2c-algo-bit.h>
@@ -388,6 +389,8 @@ struct mqnic_if {
 	struct mqnic_reg_block *rx_queue_map_rb;
 
 	int index;
+	
+	u32 mac;
 
 	u32 if_features;
 
@@ -395,6 +398,7 @@ struct mqnic_if {
 	u32 max_rx_mtu;
 	u32 tx_fifo_depth;
 	u32 rx_fifo_depth;
+
 
 	struct mqnic_res *eq_res;
 	struct mqnic_res *cq_res;

@@ -84,6 +84,8 @@ struct mqnic_if {
 
     uint32_t if_features;
 
+    uint32_t mac;
+
     uint32_t max_tx_mtu;
     uint32_t max_rx_mtu;
     uint32_t tx_fifo_depth;
@@ -134,6 +136,8 @@ struct mqnic {
     uint32_t build_date;
     uint32_t git_hash;
     uint32_t rel_info;
+
+    uint32_t num_funcs;
 
     uint32_t app_id;
 

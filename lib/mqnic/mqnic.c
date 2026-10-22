@@ -397,6 +397,7 @@ open:
 
     dev->fpga_part = get_fpga_part(dev->fpga_id);
 
+    dev->num_funcs = mqnic_reg_read32(dev->fw_id_rb->regs, MQNIC_RB_FW_ID_REG_NUM_FUNCS) - 1;
     time_t build_date = dev->build_date;
     struct tm *tm_info = gmtime(&build_date);
     strftime(dev->build_date_str, sizeof(dev->build_date_str), "%F %T", tm_info);
